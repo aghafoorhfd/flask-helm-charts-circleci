@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  repository: 480294271769.dkr.ecr.us-east-2.amazonaws.com/circleciflask
+  repository: 480294271769.dkr.ecr.us-east-2.amazonaws.com/circleciflask:latest
   pullPolicy: IfNotPresent
   tag: "latest"
 labels:
