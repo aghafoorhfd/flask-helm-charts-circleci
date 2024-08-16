@@ -1,20 +1,7 @@
-# Use the official Python image from the Docker Hub
-FROM python:3.9-slim
-
-# Set the working directory in the container
+FROM python:3.9
 WORKDIR /app
-
-# Copy the current directory contents into the container at /app
 COPY . /app
-
-# Update pip and install Flask
-RUN pip install --upgrade pip && pip install --no-cache-dir flask
-
-# Make port 5000 available to the world outside this container
+RUN pip install --no-cache-dir flask
 EXPOSE 5000
-
-# Define environment variable
 ENV FLASK_APP=app.py
-
-# Run Flask when the container launches
 CMD ["flask", "run", "--host=0.0.0.0"]
